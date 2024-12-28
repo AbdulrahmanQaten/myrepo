@@ -41,14 +41,17 @@
                 <div class="bg-white p-6 shadow rounded">
                     <h3 class="text-xl font-bold mb-2">Project 1</h3>
                     <p>A brief description of the project.</p>
+                    <button onclick="alert('More details about Project 1 coming soon!')" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Details</button>
                 </div>
                 <div class="bg-white p-6 shadow rounded">
                     <h3 class="text-xl font-bold mb-2">Project 2</h3>
                     <p>A brief description of the project.</p>
+                    <button onclick="alert('More details about Project 2 coming soon!')" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Details</button>
                 </div>
                 <div class="bg-white p-6 shadow rounded">
                     <h3 class="text-xl font-bold mb-2">Project 3</h3>
                     <p>A brief description of the project.</p>
+                    <button onclick="alert('More details about Project 3 coming soon!')" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Details</button>
                 </div>
             </div>
         </div>
@@ -72,6 +75,17 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Smooth scroll functionality
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
